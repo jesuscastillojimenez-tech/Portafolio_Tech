@@ -1,0 +1,99 @@
+:root {
+    --bg-dark-pro: #0a0e17;
+    --tech-cyan: #00e5ff;
+    --text-main: #e0e6ed;
+    --text-muted: #8899a6;
+    --glass-bg: rgba(20, 26, 35, 0.8);
+    --border-dark: rgba(255, 255, 255, 0.08);
+}
+
+body.pro-bg {
+    background-color: var(--bg-dark-pro);
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    background-image: 
+        linear-gradient(var(--border-dark) 1px, transparent 1px),
+        linear-gradient(90deg, var(--border-dark) 1px, transparent 1px);
+    background-size: 50px 50px;
+}
+
+/* NAVEGACIÓN */
+.pro-nav {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-dark);
+}
+
+.tech-text { color: #fff; text-transform: uppercase; letter-spacing: 1px; text-decoration: none; }
+.text-cyan { color: var(--tech-cyan); }
+
+/* TARJETAS */
+.pro-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--border-dark);
+    backdrop-filter: blur(5px);
+    border-radius: 12px;
+    transition: 0.3s ease-in-out;
+}
+
+.pro-card:hover {
+    border-color: rgba(0, 229, 255, 0.3);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 229, 255, 0.1);
+}
+
+/* CERTIFICADOS INTERACTIVOS */
+.cert-link { text-decoration: none; display: block; }
+.cert-item {
+    padding: 14px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-dark);
+    border-radius: 10px;
+    color: #fff;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    align-items: center;
+}
+
+.cert-link:hover .cert-item {
+    background: rgba(0, 229, 255, 0.08);
+    border-color: var(--tech-cyan);
+    color: var(--tech-cyan);
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 229, 255, 0.3);
+}
+
+/* IMAGEN DE PERFIL PULSANTE */
+.profile-image-container {
+    width: 150px; height: 150px;
+    border-radius: 50%; padding: 5px;
+    background-color: var(--bg-dark-pro);
+    position: relative;
+    animation: pulseBorder 2.5s infinite ease-in-out;
+}
+
+.profile-image {
+    width: 100%; height: 100%;
+    border-radius: 50%; object-fit: cover;
+    border: 3px solid var(--bg-dark-pro);
+}
+
+@keyframes pulseBorder {
+    0%, 100% { box-shadow: 0 0 5px rgba(0, 229, 255, 0.1); border-color: rgba(0, 229, 255, 0.1); }
+    50% { box-shadow: 0 0 25px rgba(0, 229, 255, 0.8); border-color: rgba(0, 229, 255, 0.6); }
+}
+
+/* BOTONES */
+.pro-btn-fill {
+    padding: 10px 24px; background: var(--tech-cyan); color: #000;
+    font-weight: 600; border-radius: 6px; text-decoration: none;
+}
+.pro-btn-outline {
+    padding: 10px 24px; border: 2px solid var(--tech-cyan); color: var(--tech-cyan);
+    font-weight: 600; border-radius: 6px; text-decoration: none;
+}
+
+.tech-badge {
+    background: transparent; border: 1px solid rgba(0, 229, 255, 0.2);
+    color: var(--tech-cyan); padding: 6px 12px; border-radius: 20px; font-size: 0.75rem;
+}
